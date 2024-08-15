@@ -27,7 +27,7 @@ img {
 
 /* 部品
 ------------------------------------------ */
-/* Poppinsフォント */
+/* フォント */
 .-ebgaramond {
     font-family: "EB Garamond", serif;
 }
@@ -55,6 +55,14 @@ img {
     margin: auto;
 }
 
+/* flexbox */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
+
 
 
 /* ヘッダー
@@ -67,6 +75,8 @@ img {
     left: 0;
     right: 0;
     z-index: 1;
+    max-width: 93.75rem;
+    width: 100%;
 }
 
 .header-container {
@@ -109,7 +119,8 @@ img {
     background-size: cover;
     background-position: center;
     position: relative;
-    width: 93.75rem;
+    width: 100%;
+    max-width: 93.75rem;
     height: 45rem;
 }
 
@@ -122,6 +133,7 @@ img {
     }
 }
 
+/* テキスト */
 .main-visual__item {
     position: absolute;
     top: 37.5%;
@@ -178,3 +190,133 @@ img {
         line-height: 2.3;
     }
 }
+
+
+
+/* キラメキクリーム
+------------------------------------------ */
+.kirameki-cream {
+    padding: 3rem 1rem 3rem;
+    max-width: 93.75rem;
+}
+
+@media (max-width: 767px) {
+    .kirameki-cream {
+        padding: 9.75rem 1rem 3.125rem;
+    }
+}
+
+.kirameki-cream .container {
+    max-width: 62.5rem;
+    height: 9.125rem;
+    width: 100%;
+    background-color: #F0F4FF;
+    padding-inline: 3rem;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 767px) {
+    .kirameki-cream .container {
+        flex-direction: column;
+        width: 100%;
+        height: 16.3125rem;
+        padding-top: 1.25rem;
+        padding-bottom: 2.0625rem;
+
+    }
+}
+
+/* 商品名と値段 */
+.kirameki-cream__title {
+    color: #111111;
+}
+
+@media (max-width: 767px) {
+    .kirameki-cream__title {
+        font-size: 1.125rem;
+        text-align: center;
+        line-height: 2;
+    }
+}
+
+.kirameki-cream__title--title {
+    font-size: 1.5rem;
+    letter-spacing: .1563rem;
+}
+
+@media (max-width: 1000px) {
+    .kirameki-cream__title--title {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .kirameki-cream__title--title {
+        font-size: .875rem;
+        letter-spacing: .375rem;
+        margin-left: .375rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .kirameki-cream__title--subtitle {
+        font-size: .875rem;
+        margin-left: .1875rem;
+    }
+}
+
+.kirameki-cream span {
+    margin-left: 0.5625rem;
+    letter-spacing: .0938rem;
+}
+
+@media (max-width: 767px) {
+    .kirameki-cream span {
+        margin-left: .4375rem;
+    }
+}
+
+/* ボタン */
+.kirameki-cream__nav--list {
+    column-gap: 2rem;
+}
+
+@media (max-width: 767px) {
+    .kirameki-cream__nav--list {
+        flex-direction: column;
+        row-gap: 1.25rem;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: .875rem 1.25rem;
+    color: #FFF;
+    font-size: 1.125rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2.125rem;
+    width: 18.75rem;
+    height: 3.625rem;
+}
+
+@media (max-width: 1000px){
+    .button {
+        width: 13.75rem;
+    }
+}
+
+.kirameki-cream__nav--list-first .button {
+    background-color: #46C4DB;
+}
+
+.kirameki-cream__nav--list-second .button {
+    background-color: #5DD5AB;
+}
+
+
+
+/* お肌を美しく保つ(introduction)
+------------------------------------------ */
+/* カバー画像 */
