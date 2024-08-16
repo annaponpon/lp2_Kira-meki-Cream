@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-* {
-    outline: 1px solid red;
-}
+
 
 /* ベースのスタイル
 ------------------------------------------ */
@@ -13,6 +11,10 @@ body {
     color: #000;
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -196,13 +198,13 @@ img {
 /* キラメキクリーム
 ------------------------------------------ */
 .kirameki-cream {
-    padding: 3rem 1rem 3rem;
+    padding: 3rem 1rem 0;
     max-width: 93.75rem;
 }
 
 @media (max-width: 767px) {
     .kirameki-cream {
-        padding: 9.75rem 1rem 3.125rem;
+        padding: 9.75rem 1rem 0;
     }
 }
 
@@ -326,6 +328,16 @@ img {
 /* お肌を美しく保つ(introduction)
 ------------------------------------------ */
 /* カバー画像 */
+.introduction {
+    padding-top: 3rem;
+}
+
+@media (max-width: 767px) {
+    .introduction {
+        padding-top: 3.125rem;
+    }
+}
+
 .introduction-cover {
     background-image: url("/assets/image/introduction_pc_01.jpg");
     background-size: cover;
@@ -405,4 +417,249 @@ img {
         margin-top: .25rem;
         max-width: none;
     }
+}
+
+
+
+/* お客様の声(voices)
+------------------------------------------ */
+/* カバー画像 */
+.voices {
+    padding-top: 4.375rem;
+    background-color: #F0F4FF;
+}
+
+.voices__title {
+    text-align: center;
+}
+
+
+.voices__title--first {
+    font-size: 2.8125rem;
+    letter-spacing: .1375rem;
+}
+
+.voices__title--second {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: .0625rem;
+
+}
+
+
+
+.voices-slick-container {
+    max-width: 82%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 2.75rem;
+    padding-bottom:7.1875rem;
+}
+
+.voices__slick {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    column-gap: 4.5%;
+    max-width: 61.25rem;
+}
+
+.voices__slick--item {
+    max-width: 18.75rem;
+    width: 100%;
+    background-color: #DBF7F9;
+}
+
+.voices__slick--item-image{
+    margin: 2.375rem 6.25rem .375rem;
+}
+
+
+
+.voices__slick--item-name {
+    font-size: .9375rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.voices__slick--item-text {
+    padding: .875rem 1rem 2.25rem;
+}
+
+
+
+
+/* Slick矢印 */
+.slick-arrows {
+    position: absolute;
+    top: calc((100% - 60px) / 2);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.prev-arrows {
+    left: 1.25rem;
+}
+
+.next-arrows {
+    right: 1.25rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    background-color: #00AFBF;
+}
+
+
+/* Slickドット */
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+    bottom: 1.25rem;
+    display: flex;
+    column-gap: 1.25rem;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* フッター
+------------------------------------------ */
+
+.footer {
+    color: #FFF;
+    margin-top: 3.0625rem;
+    max-width: 93.75rem;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        margin-top: 3.1875rem;
+    }
+}
+
+.footer .container {
+    background-color: #0071CE;
+    padding: 1.9375rem 11.375rem 2.0625rem;
+    justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+    .footer .container {
+        padding: 1.5rem 1.25rem 1.375rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer .container {
+        flex-direction: column;
+        padding: 1.5rem 1.25rem 1.375rem;
+    }
+}
+
+.footer-logo {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: .4rem;
+    margin-right: .875rem;
+}
+
+@media (max-width: 900px) {
+    .footer-logo {
+        font-size: 1.75rem;
+        letter-spacing: .3438rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-logo {
+        margin-left: .3125rem;
+        margin-right: 0;
+    }
+}
+
+.footer__nav {
+    font-size: .875rem;
+    line-height: 1.43;
+}
+
+@media (max-width: 900px) {
+    .footer__nav {
+        font-size: .75rem;
+    }
+}
+
+.footer__nav--list {
+    margin-left: 1.875rem;
+    column-gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .footer__nav--list {
+        margin-left: 0;
+        column-gap: 1.875rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer__nav--list {
+        margin-top: 1.5rem;
+    }
+}
+
+.footer a {
+    color: #FFF;
+}
+
+.footer-copyright {
+    font-size: .75rem;
+}
+
+@media (max-width: 900px) {
+    .footer-copyright {
+        font-size: .6875rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-copyright {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+/* トップへ戻る */
+.button-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 16.5%;
+    right: 10%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #0071CE;
+    font-size: 1.875rem;
+    line-height: 1;
+}
+
+@media (max-width: 767px) {
+    .button-to-top {
+        bottom: 19.5%;
+        right: 4%;
+    }
+}
+
+.button-to-top ::before {
+    padding-bottom: 5px;
 }
