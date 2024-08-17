@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-
+* {
+    outline: 1px solid red;
+}
 
 /* ベースのスタイル
 ------------------------------------------ */
@@ -423,14 +425,25 @@ img {
 
 /* お客様の声(voices)
 ------------------------------------------ */
-/* カバー画像 */
 .voices {
     padding-top: 4.375rem;
-    background-color: #F0F4FF;
+    padding-inline: 1rem;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .voices {
+        padding-top: 2.75rem;
+    }
 }
 
 .voices__title {
     text-align: center;
+    max-width: 93.75rem;
+}
+
+.voices-container {
+    max-width: 93.75rem;
 }
 
 
@@ -439,39 +452,77 @@ img {
     letter-spacing: .1375rem;
 }
 
+@media (max-width: 767px) {
+    .voices__title--first {
+        font-size: 1.875rem;
+        letter-spacing: 0.0938rem;
+    }
+}
+
 .voices__title--second {
     font-size: 1.25rem;
     line-height: 1.2;
     letter-spacing: .0625rem;
+}
 
+@media (max-width: 767px) {
+    .voices__title--second {
+        font-size: 1rem;
+        line-height: 1;
+        letter-spacing: 0.0625rem;
+    }
 }
 
 
 
 .voices-slick-container {
-    max-width: 82%;
+    max-width: 72.25rem;
     margin-right: auto;
     margin-left: auto;
     padding-top: 2.75rem;
-    padding-bottom:7.1875rem;
+}
+
+@media (max-width: 767px) {
+    .voices-slick-container {
+        padding-top: 2.5rem;
+    }
 }
 
 .voices__slick {
     width: 100%;
     height: auto;
-    margin: auto;
-    column-gap: 4.5%;
-    max-width: 61.25rem;
+    max-width: 72.25rem;
 }
 
 .voices__slick--item {
     max-width: 18.75rem;
     width: 100%;
     background-color: #DBF7F9;
+    margin-right: 2.5rem;
+}
+
+@media (max-width: 767px) {
+    .voices__slick--item {
+        width: 50rem;
+        margin-right: 0;
+    }
 }
 
 .voices__slick--item-image{
-    margin: 2.375rem 6.25rem .375rem;
+    margin: 2.375rem 33.3% .375rem;
+}
+
+@media (max-width: 950px) {
+    .voices__slick--item-image {
+        margin: 2.375rem 27% .375rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .voices__slick--item-image {
+        margin: 1.875rem 6.5625rem .3125rem;
+        width: 5rem;
+    }
 }
 
 
@@ -482,48 +533,83 @@ img {
     text-align: center;
 }
 
+@media (max-width: 767px) {
+    .voices__slick--item-name {
+        font-size: .875rem;
+        letter-spacing: .0313rem;
+    }
+}
+
 .voices__slick--item-text {
     padding: .875rem 1rem 2.25rem;
 }
 
+@media (max-width: 767px) {
+    .voices__slick--item-text {
+        font-size: .875rem;
+        line-height: 2;
+        padding: .9375rem .9375rem 1.625rem;
+    }
+}
+
+
+/* Slickコンテナ */
+.slick-list {
+    max-width: 63.75rem;
+    margin-inline: auto;
+}
+
+@media (max-width: 767px) {
+    .slick-list {
+        width: 17.5rem;
+    }
+}
+
+.slick-slide {
+    margin:0 1.25rem;
+}
+
+@media (max-width: 767px) {
+    .slick-slide {
+        margin: 0;
+    }
+}
 
 
 
 /* Slick矢印 */
-.slick-arrows {
-    position: absolute;
-    top: calc((100% - 60px) / 2);
-    z-index: 1;
-    cursor: pointer;
-}
-
-.prev-arrows {
-    left: 1.25rem;
-}
-
-.next-arrows {
-    right: 1.25rem;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    background-color: #00AFBF;
+.slick-arrow {
+    font-size: 2rem;
 }
 
 
 /* Slickドット */
-.slick-dotted.slick-slider {
-    margin-bottom: 0;
+.slick-dots li button:before{
+	font-size:0.625rem!important;
 }
 
-.slick-dots {
-    bottom: 1.25rem;
-    display: flex;
-    column-gap: 1.25rem;
-    justify-content: center;
+.slick-dots li{
+	width: .875rem!important;
+    margin: 0;
+    padding: .625rem;
 }
 
+@media (max-width: 767px) {
+    .slick-dots li {
+        padding: .5313rem;
+    }
+}
 
+.slick-dots{
+	bottom: -50px!important;
+}
+
+@media (max-width: 767px) {
+    .slick-dots {
+        bottom: -37px!important;
+        right: 2px!important;
+    }
+}
 
 
 
