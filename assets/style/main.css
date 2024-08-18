@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-* {
-    outline: 1px solid red;
-}
-
 /* ベースのスタイル
 ------------------------------------------ */
 body {
@@ -27,15 +23,15 @@ ul {
     list-style: none;
 }
 
-h4 {
+h5 {
     font-size: 2.8125rem;
     letter-spacing: .1375rem;
 }
     
 @media (max-width: 767px) {
-    h4 {
+    h5 {
         font-size: 1.875rem;
-        letter-spacing: 0.0938rem;
+        letter-spacing: .0938rem;
     }
 }
     
@@ -49,7 +45,7 @@ h4 {
     .title-jp {
         font-size: 1rem;
         line-height: 1;
-        letter-spacing: 0.0625rem;
+        letter-spacing: .0625rem;
     }
 }
 
@@ -105,7 +101,6 @@ h4 {
 ------------------------------------------ */
 /* ロゴ */
 .header {
-    background-color: #DBC9BB;
     position: fixed;
     top: 0;
     left: 0;
@@ -113,6 +108,10 @@ h4 {
     z-index: 1;
     max-width: 93.75rem;
     width: 100%;
+}
+
+.header-fixed {
+    background-color: rgba(255, 255, 255, .8);
 }
 
 .header-container {
@@ -222,7 +221,7 @@ h4 {
 @media (max-width: 767px) {
     .main-visual__item--text {
         font-size: 1.25rem;
-        letter-spacing: 0.375rem;
+        letter-spacing: .375rem;
         line-height: 2.3;
     }
 }
@@ -303,7 +302,7 @@ h4 {
 }
 
 .kirameki-cream span {
-    margin-left: 0.5625rem;
+    margin-left: .5625rem;
     letter-spacing: .0938rem;
 }
 
@@ -589,7 +588,7 @@ h4 {
 
 /* Slickドット */
 .slick-dots li button:before{
-	font-size:0.625rem!important;
+	font-size:.625rem!important;
 }
 
 .slick-dots li{
@@ -787,13 +786,12 @@ h4 {
 
 .footer {
     color: #FFF;
-    margin-top: 3.0625rem;
     max-width: 93.75rem;
 }
 
 @media (max-width: 767px) {
     .footer {
-        margin-top: 3.1875rem;
+        margin-top: .6875rem;
     }
 }
 
@@ -893,20 +891,18 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    bottom: 16.5%;
-    right: 10%;
     width: 2.5rem;
     height: 2.5rem;
     background-color: #0071CE;
     font-size: 1.875rem;
     line-height: 1;
+    margin-left: 87.3%;
+    margin-top: .5rem;
 }
 
 @media (max-width: 767px) {
     .button-to-top {
-        bottom: 19.5%;
-        right: 4%;
+        margin-left: 85.7%;
     }
 }
 
