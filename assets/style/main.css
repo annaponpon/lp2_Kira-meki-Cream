@@ -23,9 +23,41 @@ img {
     vertical-align: bottom;
 }
 
-    ul {
+ul {
     list-style: none;
 }
+
+h4 {
+    font-size: 2.8125rem;
+    letter-spacing: .1375rem;
+}
+    
+@media (max-width: 767px) {
+    h4 {
+        font-size: 1.875rem;
+        letter-spacing: 0.0938rem;
+    }
+}
+    
+.title-jp {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: .0625rem;
+}
+    
+@media (max-width: 767px) {
+    .title-jp {
+        font-size: 1rem;
+        line-height: 1;
+        letter-spacing: 0.0625rem;
+    }
+}
+
+.section_title {
+    text-align: center;
+    max-width: 93.75rem;
+}
+
 
 
 
@@ -426,52 +458,24 @@ img {
 /* お客様の声(voices)
 ------------------------------------------ */
 .voices {
-    padding-top: 4.375rem;
-    padding-inline: 1rem;
+    padding: 4.375rem 1rem 5.3125rem;
     width: 100%;
 }
 
 @media (max-width: 767px) {
     .voices {
         padding-top: 2.75rem;
+        padding-bottom: 2.75rem;
     }
 }
 
-.voices__title {
-    text-align: center;
-    max-width: 93.75rem;
-}
+
 
 .voices-container {
     max-width: 93.75rem;
 }
 
 
-.voices__title--first {
-    font-size: 2.8125rem;
-    letter-spacing: .1375rem;
-}
-
-@media (max-width: 767px) {
-    .voices__title--first {
-        font-size: 1.875rem;
-        letter-spacing: 0.0938rem;
-    }
-}
-
-.voices__title--second {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    letter-spacing: .0625rem;
-}
-
-@media (max-width: 767px) {
-    .voices__title--second {
-        font-size: 1rem;
-        line-height: 1;
-        letter-spacing: 0.0625rem;
-    }
-}
 
 
 
@@ -613,7 +617,167 @@ img {
 
 
 
+/* Q&A
+------------------------------------------ */
+.qa {
+    max-width: 93.75rem;
+    padding: 1.875rem 1rem 0;
+    width: 100%;
+    background: linear-gradient(to right, #F4FFE8, #C6F0FE 100%);
+}
 
+@media (max-width: 767px) {
+    .qa {
+        padding-top: 1.6875rem;
+        padding-bottom: 32px;
+        margin-bottom: -6.6875rem;
+    }
+}
+
+.qa-content {
+    width: 100%;
+    max-width: 93.75rem;
+    padding-top: 2.625rem;
+    padding-bottom: 2.5rem;
+}
+
+@media (max-width: 767px) {
+    .qa-content {
+        padding-top: 2.5rem;
+        padding-bottom: 0;
+    }
+}
+
+/* アコーディオンメニューの大きさ */
+.qa__accordion {
+    width: 100%;
+    max-width: 37.5rem;
+    margin-inline: auto;
+}
+
+/* アコーディオンメニューの間隔 */
+.qa__accordion-box:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 767px) {
+    .qa__accordion-box:not(:first-child) {
+        margin-top: 1.375rem;
+    }
+}
+
+/* 質問部分 */
+.qa__accordion-box--q {
+    height: 4.4375rem;
+    padding: 1.4375rem 2.25rem 1.25rem 3.625rem;
+    background-color: #FFF;
+    color: #444444;
+    font-size: .9375rem;
+    line-height: 1.867;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .qa__accordion-box--q {
+        padding: 1rem 1.125rem 4.4375rem 2.75rem;
+    }
+}
+
+
+
+/* Qマーク */
+.qa__accordion-box--q::before {
+    content: 'Q.';
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #444444;
+    position: absolute;
+    left: 1.5rem;
+    transform: translateY(-12%);
+}
+
+@media (max-width: 767px) {
+    .qa__accordion-box--q::before {
+        font-size: 1rem;
+        top: 22%;
+        left: 1rem;
+    }
+}
+
+/* アイコン */
+.qa__accordion-box--q::after {
+    font-family: bootstrap-icons;
+    content: "\F235";
+    display: block;
+    width: .625rem;
+    height: .625rem;
+    position: absolute;
+    top: 63.5%;
+    right: 1.4375rem;
+    transform: translateY(-50%) rotate(-180deg);
+    transition: .5s;
+}
+
+@media (max-width: 767px) {
+    .qa__accordion-box--q::after {
+        top: 46%;
+        right: .9375rem;
+    }
+}
+
+
+/* アコーディオンメニューオープン時アイコン */
+.qa__accordion-box--q.open::after {
+    transform: rotate(0);
+    top: 34%;
+    right: 1.8125rem;
+}
+
+@media (max-width: 767px) {
+    .qa__accordion-box--q.open::after {
+        top: 23%;
+        right: 1.25rem;
+    }
+}
+
+/* 回答部分は最初非表示 */
+.qa__accordion-box--a {
+    display: none;/* 非表示にしておく */
+    height: 8.25rem;
+    padding: 0 2.25rem 1.25rem 3.625rem;
+    margin-top: -.1875rem;
+    background-color: #FFF;
+    font-size: .9375rem;
+    line-height: 1.867;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .qa__accordion-box--a {
+        padding: 0 1rem 1.875rem 2.75rem;
+        height: auto;
+    }
+}
+
+/* Aマーク */
+.qa__accordion-box--a::before {
+    content: 'A.';
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    position: absolute;
+    left: 1.5rem;
+    transform: translateY(-5%);
+}
+
+@media (max-width: 767px) {
+    .qa__accordion-box--a::before {
+        font-size: 1rem;
+        top: 0%;
+        left: 1rem;
+    }
+}
 
 
 

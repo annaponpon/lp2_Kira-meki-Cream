@@ -1,3 +1,4 @@
+// スリック
 $('.voices__slick').slick({
     dots: true, //ドットのナビ表示
     arrows: true, // 前・次のスライド切り替える矢印表示
@@ -16,4 +17,17 @@ $('.voices__slick').slick({
       }
     }
     ]
+});
+
+
+
+// アコーディオンメニュー
+$(function() {
+  $('.qa__accordion-box--q').click(function() {
+    $(this).next().slideToggle(400);
+    //openクラスをつける
+    $(this).toggleClass("open");
+    //クリックされていないac-parentのopenクラスを取る
+    $('.qa__accordion-box--q').not(this).removeClass('open');
+  });
 });
